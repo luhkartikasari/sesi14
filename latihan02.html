@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Latihan jQuery 02</title>
 </head>
 <body>
@@ -51,61 +51,57 @@
             $("#hasil").hide();
             $("#HitungLuasSegitiga").hide();
             $("#HitungLuasPersegi").hide();
-            let judul = "Klik Tombol";
             
+            let judul = "Klik Tombol";
+
             $(".persegi").click(function(){
                 $("#HitungLuasSegitiga").hide(500);
                 $("#HitungLuasPersegi").show(500);
-                judul = "Hitung Luas Persegi(Persegi Panjang)"
+                judul = "Hitung Luas Persegi (Persegi Panjang)";
                 $("h3").html(judul);
-
             });
 
             $(".segitiga").click(function(){
                 $("#HitungLuasPersegi").hide(500);
                 $("#HitungLuasSegitiga").show(500);
-                judul = "Hitung Luas Segitiga"
+                judul = "Hitung Luas Segitiga";
                 $("h3").html(judul);
-
             });
-            $("h3").html(judul);
 
+            $("h3").html(judul);
 
             $(".cmdLPersegi").click(function(){
                 //get input nilai
                 let P = $(".PJ").val();
                 let L = $(".LB").val();
                 //proses
-                let LU = P*L;
+                let LU = P * L;
                 //output
-                let tx = "hasil:<br>Hitung Luas Persegi dengan Nilai Panjang "+P+" dan lebar  "+L;
-                tx  += "adalah:<br>luas = panjang X lebar<br>";
-                tx += "= "+P+" X "+L+"<br>";
-                tx += "= "+LU+"<br>Jadi Luasnya adalah "+ LU;
+                let tx = "Hasil:<br>Hitung Luas Persegi dengan nilai Panjang " + P + " dan lebar " + L;
+                tx += " adalah:<br>Luas = Panjang x Lebar<br>";
+                tx += "= " + P + " x " + L + "<br>";
+                tx += "= " + LU + "<br> Jadi Luasnya Adalah " + LU;
 
                 $("#hasil").html(tx);
-                $("#hasil").show(500);
-            })
-
-        })
-
-        $("h3").html(judul);
+                $("#hasil").show(1500);
+            });
 
             $(".cmdLSegitiga").click(function(){
                 //get input nilai
                 let A = $(".AL").val();
                 let T = $(".TG").val();
                 //proses
-                let LU = 1.2/A*T;
+                let LU = A * T * 1/2;
                 //output
-                let tx = "Hasil:<br>Hitung Luas Persegi dengan nilai Alas "+A+" dan tinggi "+T;
-                tx += "adalah:<br>Luas = 1.2 / Alas X Tinggi<br>";
-                tx += "= "+1.2+" "+A+" X "+T+"<br>";
-                tx += "= "+ LU+"<br> Jadi Luasnya Adalah "+ LU;
+                let tx = "Hasil:<br>Hitung Luas Segitiga dengan nilai Alas " + A + " dan tinggi " + T;
+                tx += " adalah:<br>Luas = Alas x Tinggi x 1/2 <br>";
+                tx += "= 1/2 x " + A + " x " + T + "<br>";
+                tx += "= " + LU + "<br> Jadi Luasnya Adalah " + LU;
 
                 $("#hasil").html(tx);
                 $("#hasil").show(1500);
             });
+        })    
     </script>
 
 </body>
